@@ -7,7 +7,7 @@
 ##############################################################################
 
 # We require the gnu-make utility
-MAKE = gmake
+MAKE = make
 
 # Compiler and linker to use
 CC = gcc
