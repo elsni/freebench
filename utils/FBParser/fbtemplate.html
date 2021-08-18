@@ -1,0 +1,198 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+   <title>Freebench Results:
+PAR_COMPUTER
+</title>
+   <META HTTP-EQUIV="Content-Type" CONTENT="text/html; charset=ISO-8859-1">
+   <META HTTP-EQUIV="Content-Language" CONTENT="en">
+</head>
+<body>
+
+<center>
+<table BORDER=0 CELLSPACING=4 CELLPADDING=4 width="100%">
+<tr><td bgcolor="#000000" colspan=2>
+<h2><font color="#ffffff">
+PAR_COMPUTER
+</font></h2>
+</td></tr><tr><td bgcolor="#9999ff" colspan=2>
+<b>Tested by:</b> 
+PAR_NAME
+, 
+PAR_MAIL
+<br><b>System data:</b> 
+PAR_SYSTEM
+<br><b>Operating System:</b> 
+PAR_OS
+<br>
+<hr size=1 noshade>
+<table border=0 cellspacing=2 cellpadding=0>
+<tr><td bgcolor="#9999ff">&nbsp;</td>
+
+<td bgcolor="#9999ff"><img src="./utils/FBParser/images/line.gif" height=25 width=500 border=0 alt="Scale"></td></tr>
+
+<tr><td bgcolor="#9999ff">Analyzer:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_red.gif" height=12 width=
+PAR_ANALYZER_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_ANALYZER
+</td></tr>
+<tr><td bgcolor="#9999ff">FourInARow:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_red.gif" height=12 width=
+PAR_FOURINAROW_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_FOURINAROW
+</td></tr>
+<tr><td bgcolor="#9999ff">Mason:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_red.gif" height=12 width=
+PAR_MASON_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_MASON
+</td></tr>
+<tr><td bgcolor="#9999ff">pCompress2:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_red.gif" height=12 width=
+PAR_PCOMPRESS2_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_PCOMPRESS2
+</td></tr>
+<tr><td bgcolor="#9999ff" valign=top>Gmean (int):&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_yellow.gif" height=12 width=
+PAR_GMEAN_INT_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_GMEAN_INT
+<br>&nbsp;</td></tr>
+
+<tr><td bgcolor="#9999ff">PiFFT:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_green.gif" height=12 width=
+PAR_PIFFT_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_PIFFT
+</td></tr>
+<tr><td bgcolor="#9999ff">DistRay:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_green.gif" height=12 width=
+PAR_DISTRAY_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_DISTRAY
+</td></tr>
+<tr><td bgcolor="#9999ff">Neural:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_green.gif" height=12 width=
+PAR_NEURAL_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_NEURAL
+</td></tr>
+<tr><td  bgcolor="#9999ff" valign=top>Gmean (float):&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_yellow.gif" height=12 width=
+PAR_GMEAN_FLOAT_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_GMEAN_FLOAT
+<br>&nbsp;</td></tr>
+
+<tr><td  bgcolor="#9999ff" valign=top>Geometric Mean:&nbsp;</td><td bgcolor="#9999ff"><img src="./utils/FBParser/images/line_blue.gif" height=12 width=
+PAR_GMEAN_ALL_WIDTH 
+border=1 alt="Bar">&nbsp;&nbsp;
+PAR_GMEAN_ALL
+<br>&nbsp;</td></tr>
+
+</table>
+
+<hr size=1 noshade><small>
+<b>Compiler:</b> 
+PAR_COMPILER
+<br>&nbsp;<b>Flags - Analyzer:</b> 
+PAR_FLAGS_ANALYZER
+<br>&nbsp;<b>Flags - FourInARow:</b> 
+PAR_FLAGS_FOURINAROW
+<br>&nbsp;<b>Flags - Mason:</b> 
+PAR_FLAGS_MASON
+<br>&nbsp;<b>Flags - pCompress2:</b> 
+PAR_FLAGS_PCOMPRESS2
+<br>&nbsp;<b>Flags - PiFFT:</b> 
+PAR_FLAGS_PIFFT
+<br>&nbsp;<b>Flags - DistRay:</b> 
+PAR_FLAGS_DISTRAY
+<br>&nbsp;<b>Flags - Neural:</b> 
+PAR_FLAGS_NEURAL
+</small>
+
+<hr size=1 noshade>
+By pressing the button below you will submit your benchmark results and system information to freebench.org.<br>
+The results will be displayed at freebench.org if the benevolent dictator biff think they are interresting...<br>
+( Oh, and you will need to be connected to the net if this is going to work :)<br>&nbsp;
+
+<!-- This form will make it possible to submit results to the server specified in the ACTION field below -->
+<FORM METHOD="post" ACTION="http://www.freebench.org/cgi-bin/submit.pl">
+  <!-- General Information -->
+  <INPUT TYPE=hidden NAME=name VALUE="
+PAR_NAME
+">
+  <INPUT TYPE=hidden NAME=mail VALUE="
+PAR_MAIL
+">
+  <INPUT TYPE=hidden NAME=computer VALUE="
+PAR_COMPUTER
+">
+  <INPUT TYPE=hidden NAME=system VALUE="
+PAR_SYSTEM
+">
+  <INPUT TYPE=hidden NAME=os VALUE="
+PAR_OS
+">
+  <INPUT TYPE=hidden NAME=compiler VALUE="
+PAR_COMPILER
+">
+  <!-- Benchmark Results -->
+  <INPUT TYPE=hidden NAME=analyzer VALUE="
+PAR_ANALYZER
+">
+  <INPUT TYPE=hidden NAME=fourinarow VALUE="
+PAR_FOURINAROW
+">
+  <INPUT TYPE=hidden NAME=mason VALUE="
+PAR_MASON
+">
+  <INPUT TYPE=hidden NAME=pcompress2 VALUE="
+PAR_PCOMPRESS2
+">
+  <INPUT TYPE=hidden NAME=pifft VALUE="
+PAR_PIFFT
+">
+  <INPUT TYPE=hidden NAME=distray VALUE="
+PAR_DISTRAY
+">
+  <INPUT TYPE=hidden NAME=neural VALUE="
+PAR_NEURAL
+">
+  <!-- Compiler Flags -->
+  <INPUT TYPE=hidden NAME=flags_analyzer VALUE="
+PAR_FLAGS_ANALYZER
+">
+  <INPUT TYPE=hidden NAME=flags_fourinarow VALUE="
+PAR_FLAGS_FOURINAROW
+">
+  <INPUT TYPE=hidden NAME=flags_mason VALUE="
+PAR_FLAGS_MASON
+">
+  <INPUT TYPE=hidden NAME=flags_pcompress2 VALUE="
+PAR_FLAGS_PCOMPRESS2
+">
+  <INPUT TYPE=hidden NAME=flags_pifft VALUE="
+PAR_FLAGS_PIFFT
+">
+  <INPUT TYPE=hidden NAME=flags_distray VALUE="
+PAR_FLAGS_DISTRAY
+">
+  <INPUT TYPE=hidden NAME=flags_neural VALUE="
+PAR_FLAGS_NEURAL
+">
+  <!-- Mean Values -->
+  <INPUT TYPE=hidden NAME=gmean_int VALUE="
+PAR_GMEAN_INT
+">
+  <INPUT TYPE=hidden NAME=gmean_float VALUE="
+PAR_GMEAN_FLOAT
+">
+  <INPUT TYPE=hidden NAME=gmean_all VALUE="
+PAR_GMEAN_ALL
+">
+  <!-- Submit Results -->
+  <INPUT TYPE="submit" VALUE="Submit Results">
+</FORM>
+
+</table></center>
+
+<hr size=1 noshade>
+
+</body>
+</html>
+

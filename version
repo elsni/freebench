@@ -1,0 +1,17 @@
+Version 1.03
+
+Last changed: Wed Jan 30 11:08:32 CET 2002
+
+Change log:
+--- 2002 ---
+Jan 30: Incorporated changes made by Tapsa. New make rules, some nifty scripts
+and some updates to make it compile on HP-UX. FreeBench is now at v1.03
+
+--- 2001 ---
+Dec 18: Fixed some source bugs that kept FreeBench from compiling with some 
+C++ compilers. Thanks to Tapsa for pointing this out. FreeBench is now 
+at v1.02
+Dec 13: Fixed a small bug that would have DistRay falsely report the 
+wrong result under some circumstances. Thanks to Tapsa for pointing this out. 
+FreeBench is now at v1.01 
+May 10: First release of FreeBench v1.00
