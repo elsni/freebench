@@ -4,7 +4,7 @@ Since I still like to compare computer benchmark results with old systems
 I stick to this benchmark test. It should compile fine on modern linux.
 
 ## What is this?
-Benchmark Suite for Modern Microprocessors and Computer Systems.
+Single Core Benchmark Suite for Modern Microprocessors and Computer Systems.
 
 ## QUICK START
 Read the section HOW TO RUN below.
