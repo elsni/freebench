@@ -2,6 +2,13 @@
 This was taken from www.freebench.org which is down for years now.
 Since I still like to compare computer benchmark results with old systems
 I stick to this benchmark test. It should compile fine on modern linux.
+you may need to make ./utils/run.sh executable before launch.
+
+I (elsni)  am not the author of this software.
+
+Following the original README file:
+
+---
 
 ## What is this?
 Single Core Benchmark Suite for Modern Microprocessors and Computer Systems.
@@ -31,11 +38,11 @@ your compiler.
 like this.
 
 You must specify one of the following:
- gmake ref - compiles and runs the benchmark
- gmake test - compiles and runs a test run
- gmake util - builds the utilities (done also by ref and test)
- gmake clean - remove the traces of the last compilation
- gmake distclean - same as clean but applies also for the utilities
+ make ref - compiles and runs the benchmark
+ make test - compiles and runs a test run
+ make util - builds the utilities (done also by ref and test)
+ make clean - remove the traces of the last compilation
+ make distclean - same as clean but applies also for the utilities
 
 If you receive an error message saying that the benchmark produced faulty 
 results, it means that the results produced by your computer contains errors. 
