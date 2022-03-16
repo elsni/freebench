@@ -131,17 +131,17 @@ BENCHMARK6 = $(BENCHDIR)/$(BENCH6)
 BENCHMARK7 = $(BENCHDIR)/$(BENCH7)
 
 # The benchmark utilities
-UTIL1 = $(UTILDIR)/BenchDiff
-UTIL2 = $(UTILDIR)/RunBenchmark
-UTIL3 = $(UTILDIR)/FBParser
+UTIL1 = $(UTILDIR)/src/BenchDiff
+UTIL2 = $(UTILDIR)/src/RunBenchmark
+UTIL3 = $(UTILDIR)/src/FBParser
 
 default:
 	@echo "You must specify one of the following:"
-	@echo " gmake ref - compiles and runs the benchmark"
-	@echo " gmake test - compiles and runs a test run"
-	@echo " gmake util - builds the utilities (done also by ref and test)"
-	@echo " gmake clean - remove the traces of the last compilation"
-	@echo " gmake distclean - same as clean but applies also for the utilities"
+	@echo " make ref - compiles and runs the benchmark"
+	@echo " make test - compiles and runs a test run"
+	@echo " make util - builds the utilities (done also by ref and test)"
+	@echo " make clean - remove the traces of the last compilation"
+	@echo " make distclean - same as clean but applies also for the utilities"
 
 test: util build strip
 	$(RUNSCRIPT) test 2> resultfile.txt

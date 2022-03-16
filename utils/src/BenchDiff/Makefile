@@ -20,7 +20,7 @@ $(TARGET): $(OBJS)
 	${CC} $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS)
 
 install: 
-	cp $(TARGET) ../
+	cp $(TARGET) ../../
 
 clean:
 	rm -f $(OBJS) $(TARGET) *~ *.bak

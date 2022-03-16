@@ -155,13 +155,13 @@ int main(int argc, char **argv)
     fclose(config);
 
     /* Parse template file and substitute all PAR_* for real data. */
-      
-    mall=fopen("./utils/FBParser/fbtemplate.html","r");
+
+    mall=fopen("./utils/src/FBParser/fbtemplate.html","r");
     if (mall==NULL) {
-      fprintf(stderr,"ERROR: Unable to open configuration file './utils/FBParser/fbtemplate.html'.\n");
+      fprintf(stderr,"ERROR: Unable to open configuration file './utils/src/FBParser/fbtemplate.html'.\n");
       exit(1);
     }
-    
+
     line = fgets(tmp_line, MAXLINE, mall); strncpy(copy_line, tmp_line, MAXLINE);
     while (line!=NULL) {
       strtok(tmp_line," ");
@@ -184,7 +184,3 @@ int main(int argc, char **argv)
 
   return 0;
 }
-
-
-
-

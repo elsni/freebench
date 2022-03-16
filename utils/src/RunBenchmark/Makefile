@@ -1,13 +1,13 @@
-TARGET = fbparser
+TARGET = runbenchmark
 VERSION = 1.0
 
-SRCS = fbparser.c
+SRCS = runbenchmark.c
 OBJS = $(SRCS:.c=.o)
 HDRS = 
 
 CC = cc
 
-LDFLAGS = -lm
+LDFLAGS =
 
 FLAGS = -O
 CFLAGS = $(FLAGS) 
@@ -20,7 +20,7 @@ $(TARGET): $(OBJS)
 	${CC} $(CFLAGS) -o $(TARGET) $(OBJS) $(LDFLAGS)
 
 install: 
-	cp $(TARGET) ../
+	cp $(TARGET) ../../
 
 clean:
 	rm -f $(OBJS) $(TARGET) *~ *.bak
