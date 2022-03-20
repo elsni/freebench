@@ -60,4 +60,7 @@ dkms.conf
 resultfile.txt
 result.html
 
+# editor junk
+*.swp
+
 # End of https://www.toptal.com/developers/gitignore/api/c
