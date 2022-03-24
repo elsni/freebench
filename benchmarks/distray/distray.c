@@ -424,7 +424,7 @@ int main(int c, char *v[])
     exit(1);
   }
 
-  fscanf(in_fp,"%d",&DISTRIB);
+  if(fscanf(in_fp,"%d",&DISTRIB)){};
   fclose(in_fp);
   /* End of Benchmark stuff */
 

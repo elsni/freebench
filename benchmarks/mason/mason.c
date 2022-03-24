@@ -285,10 +285,10 @@ int main(int argc,char *argv[]) {
     fprintf(stderr,"ERROR in %s: Could not open datafile %s\n",argv[0],argv[1]);
     exit(1);
   }
-  
-  fscanf(fp,"%d %d %d %d %d %d %d %d %d", 
-	 &p.a, &p.b, &p.c, &p.d, &p.bi, &p.ar, &p.g1, &p.g2, &p.g3);
-  
+
+  if(fscanf(fp,"%d %d %d %d %d %d %d %d %d",
+	 &p.a, &p.b, &p.c, &p.d, &p.bi, &p.ar, &p.g1, &p.g2, &p.g3)){};
+
   for(k=2;;k+=2) {
     printf("Trying %d\n",k);
     if(mu(p,k,0,-1) == 1) {
@@ -297,7 +297,7 @@ int main(int argc,char *argv[]) {
     }
   }
 #endif
-  
+
   return 0;
 }
 

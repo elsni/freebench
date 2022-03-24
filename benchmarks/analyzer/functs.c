@@ -15,11 +15,11 @@ void speedup_test(FILE *fp)
   
   rewind(fp);
 
-  fscanf(fp,"%s %lu",string,&issue_no1);
+  if(fscanf(fp,"%s %lu",string,&issue_no1)){};
 
   do {
     strcpy(ostring,string);
-    fgets(string,100,fp);
+    if(fgets(string,100,fp)){};
   } while (string[0]!='E');
 
   sscanf(ostring,"%s %lx %lu",slask,&address,&issue_no2);
@@ -41,16 +41,16 @@ uint32 imix_test(FILE *fp)
   uint32 issue_no1, issue_no2;
   uint32 data_access=0;
 
-  rewind(fp); 
+  rewind(fp);
 
-  fgets(string, 100, fp);
+  if(fgets(string, 100, fp)){};
 
-  fscanf(fp,"%s %lu",string,&issue_no1);
+  if(fscanf(fp,"%s %lu",string,&issue_no1)){};
   do {
     if (string[2]==':')
       data_access++;
     strcpy(ostring,string);
-    fgets(string,100,fp);
+    if(fgets(string,100,fp)){};
   } while (string[0]!='E');
 
   sscanf(ostring,"%s %lx %lu",slask,&address,&issue_no2);

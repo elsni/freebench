@@ -49,7 +49,7 @@ void uncompress(int argc, char *argv[])
     fprintf(stderr,"ERROR: Could not find infile.\n");
     exit(1);
   }
-  
+
 #ifndef BENCHMARK
   strcpy(outname,argv[1]); /* name the outfile */
   strcat(outname,".uncompr"); /* add the suffix '.uncompr' */
@@ -60,9 +60,9 @@ void uncompress(int argc, char *argv[])
   }
 #endif
 
-  fread(&size,sizeof(unsigned int),1,fpi); /* Read size of original file */
-  fread(&orgpos,sizeof(unsigned int),1,fpi); /* Read the position of the original string */
-  
+  if(fread(&size,sizeof(unsigned int),1,fpi)){}; /* Read size of original file */
+  if(fread(&orgpos,sizeof(unsigned int),1,fpi)){}; /* Read the position of the original string */
+
   in=(unsigned char *)malloc(2*size*sizeof(unsigned char));
   deari=(unsigned char *)malloc(2*size*sizeof(unsigned char));
   derle=(unsigned char *)malloc(2*size*sizeof(unsigned char));

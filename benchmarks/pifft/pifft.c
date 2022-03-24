@@ -67,10 +67,10 @@ int main(int argc, char *argv[])
     double *d1, *d2, *d3, *w;
     char *dgt;
     FILE *f_in;
-   
+
     fprintf(stderr,"Compile date: %s\n", COMPDATE);
     fprintf(stderr,"Compiler switches: %s\n", CFLAGS);
-    
+
     if (argc!=2)
       exit(1);
 
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
       fprintf(stderr,"ERROR: Could not open indata file.\n");
       exit(1);
     }
-    fscanf(f_in, "%d", &nfft);
+    if(fscanf(f_in, "%d", &nfft)){};
     
     printf("initializing...\n");
     for (log2_nfft = 1; (1 << log2_nfft) < nfft; log2_nfft++);

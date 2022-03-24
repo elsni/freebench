@@ -661,17 +661,17 @@ int main (int c, char *v[])
     exit(1);
   }
 
-  fscanf(in_fp,"%d",&DEPTH);
-  fscanf(in_fp,"%d",&ab);
+  if(fscanf(in_fp,"%d",&DEPTH)){};
+  if(fscanf(in_fp,"%d",&ab)){};
   fclose(in_fp);
- 
+
   printf("Recursion depth: %d\n", DEPTH);
   printf("Alpha-Beta pruning: %s\n", ab ? "on":"off");
-  if (ab == 1) 
+  if (ab == 1)
     printf("Using pruning method 1\n");
-  if (ab == 2) 
+  if (ab == 2)
     printf("Using pruning method 2\n");
-    
+
 
   init_patterns();
   init_board(b);
@@ -681,7 +681,7 @@ int main (int c, char *v[])
     if (cvsc)
       place_piece(think(b,1,ab),1,b);
     else {
-      scanf("%d",&in);
+      if(scanf("%d",&in)){};
       if (place_piece(in,1,b))
 	continue;
     }

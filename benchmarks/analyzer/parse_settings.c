@@ -21,31 +21,30 @@ int parse_settings(char *filename)
   char *line;
   int i=0;
 
-  line=(char *)malloc(100*sizeof(char));  
-  for (i=0;i<NUM_TOKENS;i++)  
+  line=(char *)malloc(100*sizeof(char));
+  for (i=0;i<NUM_TOKENS;i++)
     settings[i]=-1;
 
   if ((fp=fopen(filename,"r"))==NULL) {
     fprintf(stderr,"Could not find file %s\n",filename);
     exit(1);
   }
-  
+
   while(!feof(fp)) {
     i=0;
-    fgets(line,100,fp);
+    if(fgets(line,100,fp)){};
     if (line[0]=='#') {
       continue;
     }
     strtok(line," ");
     while (i<NUM_TOKENS) {
       if (!strcmp(pattern[i],line)) {
-	settings[i]=atoi(&line[strlen(line)+1]);
+		settings[i]=atoi(&line[strlen(line)+1]);
       }
       i++;
     }
   }
 
   free(line);
-
   return 0;
 }

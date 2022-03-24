@@ -128,7 +128,7 @@ int main(int c, char *v[])
   }
   
   do {
-    fgets(string,100,fp);
+    if(fgets(string,100,fp)){};
   } while (string[0]!='E');
   
   num_epochs = atoi(string+5);
@@ -156,10 +156,10 @@ int main(int c, char *v[])
 
   if (fastspeed)
     speedup_test(fp);
-  
+
   if (imix)
     mem_ops=imix_test(fp);
-  
+
   if (data || name || speed) {
     epoch=(epoch_t *)malloc(num_epochs*sizeof(epoch_t));
     if (!epoch) {
@@ -177,28 +177,26 @@ int main(int c, char *v[])
     /* We only want to benchmark CPU & Memory performance. */
     {
       char *indata_line;
-      
       indata_lines=(char **)malloc((mem_ops+loops+10)*sizeof(char *));
       while(!feof(fp)) {
 	indata_line=(char *)malloc(50*sizeof(char));
-	fgets(indata_line,50,fp);
+	if(fgets(indata_line,50,fp)){};
 	indata_lines[counter++]=indata_line;
       }
     }
-    
+
     counter=0;
 
     sscanf(indata_lines[counter++],"%s %lu",string,&issue_no);
- 
+
   /* fprintf(stderr,"DEBUG: \tLabel %s at cycle %lu...\n",string,issue_no); */
     epoch[0].start_time=issue_no;
     varv_in_epoch=-1;
     place_in_varv=0;
     while (1) {
-      if (!strcmp(string,"START:")) { 
+      if (!strcmp(string,"START:")) {
 	varv++;
 	varv_in_epoch++;
-	
 	if (varv_in_epoch==epoch_length) {
 	  place_in_varv=0;
 	  varv_in_epoch=0;
@@ -234,7 +232,7 @@ int main(int c, char *v[])
 	      epoch[varv/epoch_length].last=trans;
 	    }
 	  } else if (!strcmp(string,"ST:")) {
-	    data_pen_tot+=(uint32)store_pen;
+        data_pen_tot+=(uint32)store_pen;
 	    load_store=store_op;
 	    trans=(trans_t *)malloc(sizeof(trans_t));
 	    trans->load_store=store_op;

@@ -106,25 +106,25 @@ int main (int c, char *v[])
 
   fprintf(stderr,"Compile date: %s\n", COMPDATE);
   fprintf(stderr,"Compiler switches: %s\n", CFLAGS);
-  
-  if (c!=2) { 
+
+  if (c!=2) {
     fprintf(stderr,"Wrong number of arguments, 1 needed, %d specified.\n",c-1); 
     fprintf(stderr,"USAGE: %s <datafile>\n",v[0]);
-    exit(1); 
+    exit(1);
   }
-   
+
   fp=fopen(v[1], "r");
   if (fp==NULL) {
     fprintf(stderr,"ABORT: Could not read datafile %s\n",v[1]);
-    exit(1); 
+    exit(1);
   }
-  
+
   /* Size of NeuralNet specifed in datafile. */
-  fgets(indata,99,fp);
+  if(fgets(indata,99,fp)){};
   NNWIDTH  = atoi(indata);
-  fgets(indata,99,fp);
+  if(fgets(indata,99,fp)){};
   NNHEIGHT  = atoi(indata);
-  fgets(indata,99,fp);
+  if(fgets(indata,99,fp)){};
   NUMPATS  = atoi(indata);
   NNTOT    = NNWIDTH*NNHEIGHT;
 
@@ -190,7 +190,7 @@ int main (int c, char *v[])
   delta(0.5);           /* try to learn vectors using delta learning */
   printf("Store check...\n");
   storecheck();         /* check if vectors were stored */
-   
+
 
   /* original menu system removed
    char option;
@@ -389,13 +389,13 @@ static int run (signed int *source, signed int *dest)
      exit(1);
    }
 
-   for(neuron=0; neuron<NNTOT; neuron++) 
+   for(neuron=0; neuron<NNTOT; neuron++)
       tempvecA[neuron]=source[neuron];
 
    while((!stable) && (max<500)) {
       for(row=0; row<NNTOT; row++) {
          thesum=0;
-         for(neuron=0; neuron<NNTOT; neuron++) 
+         for(neuron=0; neuron<NNTOT; neuron++)
             thesum+=Tmatrix[row][neuron]*tempvecA[neuron];
          tempvecB[row]= (thesum>=0) ? 1 : -1;
       } /* for */
@@ -439,10 +439,10 @@ static void readvector (FILE *fp)
 
   for(vec=0; vec<NUMPATS; vec++) {
     vpos=0;
-    fscanf(fp, "%s", srow);
+    if(fscanf(fp, "%s", srow)){};
     vnames[vec]=srow[0];
     for(row=0; row<NNHEIGHT; row++) {
-      fscanf(fp, "%s", srow);
+      if(fscanf(fp, "%s", srow)){};
       for(column=0; column<NNWIDTH; column++) {
 	vectors[vec][vpos] = (srow[column]=='X') ? 1 : -1;
 	vpos++;
